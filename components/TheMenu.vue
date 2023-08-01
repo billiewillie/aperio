@@ -1,5 +1,5 @@
 <template>
-  <ul class="nav">
+  <ul class="nav flex flex-col min-[1280px]:justify-between min-[1280px]:flex-row">
     <li class="nav-item" v-for="item in data" :key="item.id">
       <a :href="item.link">{{ item.text }}</a>
     </li>
