@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'HeliosCond';
+  src: url('../fonts/HeliosCondLight.woff2') format('woff2'),
+  url('../fonts/HeliosCondLight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HeliosCond';
+  src: url('../fonts/HeliosCondRegular.woff2') format('woff2'),
+  url('../fonts/HeliosCondRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HeliosCond';
+  src: url('../fonts/HeliosCondBold.woff2') format('woff2'),
+  url('../fonts/HeliosCondBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
