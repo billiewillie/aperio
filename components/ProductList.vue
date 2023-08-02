@@ -1,13 +1,15 @@
 <template>
   <div class="bg-[#0C0C0C] py-[30px] lg:py-[90px]">
     <div class="container">
-      <ul class="list flex flex-col xl:flex-row flex-wrap">
+      <ul class="list flex flex-col lg:flex-row flex-wrap">
         <li
-            class="list-item xl:w-1/3"
+            class="grid grid-cols-[50px_1fr] lg:grid-cols-[70px_1fr] lg:w-1/3 gap-x-[40px]"
             v-for="item in data"
             :key="item.id">
-          <div class="number">
-            <span>{{ item.id}}</span>
+          <div class="number row-span-2">
+            <span class="flex justify-center items-center border border-custom-red rounded-full w-[50px] lg:w-[70px] h-[50px] lg:h-[70px] text-[20px] lg:text-[26px]">
+              {{ item.id}}
+            </span>
           </div>
           <h2 class="title">{{ item.name}}</h2>
           <p class="description">{{ item.description}}</p>

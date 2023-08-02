@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper bg-black min-h-screen flex flex-col overflow-hidden">
+    <ProductList/>
     <TheHeader/>
     <ProductOne/>
     <AppFeatures :data="product1Features" class="lg:grid-cols-4"/>
@@ -10,7 +11,6 @@
     <ProductThree/>
     <AppFeatures :data="product3Features" class="lg:grid-cols-3"/>
     <Product3Image/>
-    <ProductList/>
     <ContactBlock/>
     <TheFooter/>
   </div>
