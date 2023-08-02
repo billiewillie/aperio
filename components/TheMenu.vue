@@ -1,7 +1,9 @@
 <template>
-  <ul class="nav flex flex-col min-[1280px]:justify-between min-[1280px]:flex-row">
+  <ul class="nav flex flex-col lg:justify-between lg:flex-row gap-x-[30px]">
     <li class="nav-item" v-for="item in data" :key="item.id">
-      <a :href="item.link">{{ item.text }}</a>
+      <a
+          :href="item.link"
+          class="text-custom-gray cursor-pointer">{{ item.text }}</a>
     </li>
   </ul>
 </template>
@@ -10,17 +12,17 @@
 const data = ref([
   {
     id: 1,
-    link: "#",
+    link: "#product-1",
     text: "Сканер Aperio GT450 DX",
   },
   {
     id: 2,
-    link: "#",
+    link: "#product-2",
     text: "Сканер Aperio CS 2",
   },
   {
     id: 3,
-    link: "#",
+    link: "#product-3",
     text: "Программное обеспечение  eSlide Manager",
   },
   {

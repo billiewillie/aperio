@@ -1,19 +1,22 @@
 <template>
   <div id="product-3">
-    <div class="image">
-      <nuxt-img
-          src="/images/product-3-image.png"
-          alt=""/>
-    </div>
-    <div class="container">
-      <h1 class="title">
-        <span>Программное обеспечение</span>
-        <span>eSlide</span>
-        <span>Manager</span>
-      </h1>
-      <ul class="list">
-        <li class="list-item" v-for="item in data" :key="item.id">{{ item.text}}</li>
-      </ul>
+    <div class="container flex flex-col lg:flex-row">
+      <div class="image">
+        <nuxt-img
+            src="/images/product-3-image.png"
+            format="webp"
+            alt=""/>
+      </div>
+      <div class="text">
+        <h2 class="title">
+          <span class="font-light">Программное обеспечение</span>
+          <span>eSlide</span>
+          <span class="text-custom-red">Manager</span>
+        </h2>
+        <ul class="list">
+          <li class="list-item" v-for="item in data" :key="item.id">{{ item.text}}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>

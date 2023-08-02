@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="bg-[#0C0C0C] py-[30px] lg:py-[90px]">
     <div class="container">
-      <ul class="list flex flex-col min-[1280px]:flex-row flex-wrap">
+      <ul class="list flex flex-col xl:flex-row flex-wrap">
         <li
-            class="list-item min-[1280px]:w-1/3"
+            class="list-item xl:w-1/3"
             v-for="item in data"
             :key="item.id">
           <div class="number">

@@ -1,10 +1,12 @@
 <template>
-	<header class="header py-[15px] min-[1280px]:py-[34px]">
-    <div class="container min-[1280px]:justify-between">
+	<header class="header py-[15px] xl:py-[34px] relative z-10">
+    <div class="container flex items-center justify-between">
       <TheLogo />
       <TheMenu />
-      <div class="phone">
-        <div class="icon">icon</div>
+      <div class="flex gap-x-[10px]">
+        <div class="icon">
+          <IconPhone />
+        </div>
         <a href="tel:+74951234567">+7 (495) 123-45-67</a>
       </div>
       <div class="location">
@@ -18,6 +20,6 @@
   </header>
 </template>
 
-<script setup lang="ts">
-import TheLogo from '@@/components/TheLogo.vue'
+<script setup>
+import IconPhone from "@@/components/icons/IconPhone.vue";
 </script>
