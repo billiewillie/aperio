@@ -16,5 +16,8 @@
     "nuxt": "^3.6.5",
     "postcss": "^8.4.27",
     "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "@formkit/nuxt": "^0.17.5"
   }
 }

@@ -1,13 +1,13 @@
 <template>
-  <div class="bg-[#0C0C0C] py-[30px] lg:py-[90px]">
+  <div class="bg-[#0C0C0C] py-[30px] xl:py-[90px]">
     <div class="container">
-      <ul class="list flex flex-col lg:flex-row flex-wrap">
+      <ul class="list flex flex-col xl:flex-row flex-wrap">
         <li
-            class="grid grid-cols-[50px_1fr] lg:grid-cols-[70px_1fr] lg:w-1/3 gap-x-[40px]"
+            class="grid grid-cols-[50px_1fr] xl:grid-cols-[70px_1fr] xl:w-1/3 gap-x-[40px]"
             v-for="item in data"
             :key="item.id">
           <div class="number row-span-2">
-            <span class="flex justify-center items-center border border-custom-red rounded-full w-[50px] lg:w-[70px] h-[50px] lg:h-[70px] text-[20px] lg:text-[26px]">
+            <span class="flex justify-center items-center border border-custom-red rounded-full w-[50px] xl:w-[70px] h-[50px] xl:h-[70px] text-[20px] xl:text-[26px]">
               {{ item.id}}
             </span>
           </div>

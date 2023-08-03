@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper bg-black min-h-screen flex flex-col overflow-hidden">
-    <ProductList/>
+    <ProductThree/>
     <TheHeader/>
     <ProductOne/>
     <AppFeatures :data="product1Features" class="lg:grid-cols-4"/>
@@ -8,9 +8,9 @@
     <ProductTwo/>
     <AppFeatures :data="product2Features" class="lg:grid-cols-3"/>
     <CardFeatures :data="product2CardFeatures"/>
-    <ProductThree/>
     <AppFeatures :data="product3Features" class="lg:grid-cols-3"/>
     <Product3Image/>
+    <ProductList/>
     <ContactBlock/>
     <TheFooter/>
   </div>
@@ -132,20 +132,26 @@ const product1CardFeatures = [
   {
     id: 1,
     type: 'image',
-    title: 'title 1',
-    text: 'Современный интерфейс управления сканером, не требующий специального обучения оператора.'
+    video: '',
+    cover: '/images/card-1-image.jpg',
+    title: 'открытый дизайн',
+    text: 'Открытый дизайн Aperio GT450 DX для безостановочной загрузки кассет со стёклами. Работа без управляющей рабочей станции. Максимальная продуктивность.'
   },
   {
     id: 1,
     type: 'video',
-    title: 'title 1',
-    text: 'Апохроматический объектив, функция Z-стэк и линейный принцип сканирования дают безупречное изображение препарата без следов сшивки и позволяют работать с толстыми стёклами.'
+    video: '',
+    cover: '/images/card-2-image.jpg',
+    title: 'специальный объектив 40x',
+    text: 'Специально разработанный Leica Microsystems апохроматический объектив, оптимизированный для высокоскоростного сканирования, с увеличенным до 1 мм полем зрения.'
   },
   {
     id: 1,
     type: 'image',
-    title: 'title 1',
-    text: 'Легкая загрузка от 1 до 5 стекол.'
+    video: '',
+    cover: '/images/card-3-image.jpg',
+    title: 'идеальная цветопередача',
+    text: 'Динамическая фокусировка по всему препарату и калибровка сканера на каждом стекле. Автоматический контроль качества произведёт проверку по результатам сканирования. Патоморфолог точно получит качественные изображения.'
   },
 ];
 
@@ -153,19 +159,25 @@ const product2CardFeatures = [
   {
     id: 1,
     type: 'image',
-    title: 'title 1',
+    video: '',
+    cover: '/images/card-4-image.jpg',
+    title: 'легкость в управлении',
     text: 'Современный интерфейс управления сканером, не требующий специального обучения оператора.'
   },
   {
     id: 1,
     type: 'image',
-    title: 'title 1',
+    video: '',
+    cover: '/images/card-5-image.jpg',
+    title: 'универсальность',
     text: 'Апохроматический объектив, функция Z-стэк и линейный принцип сканирования дают безупречное изображение препарата без следов сшивки и позволяют работать с толстыми стёклами.'
   },
   {
     id: 1,
     type: 'image',
-    title: 'title 1',
+    video: '',
+    cover: '/images/card-6-image.jpg',
+    title: 'быстрая загрузка',
     text: 'Легкая загрузка от 1 до 5 стекол.'
   },
 ];
