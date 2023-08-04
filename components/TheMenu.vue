@@ -1,5 +1,5 @@
 <template>
-  <ul class="nav flex flex-col xl:justify-between xl:flex-row gap-x-[30px]">
+  <ul class="nav flex flex-col items-center xl:justify-between xl:flex-row gap-x-[30px] gap-y-[20px]">
     <li class="nav-item" v-for="item in data" :key="item.id">
       <a
           :href="item.link"

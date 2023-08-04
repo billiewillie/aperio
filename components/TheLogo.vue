@@ -1,9 +1,7 @@
 <template>
-  <div class="logo">
-    <nuxt-img
-        src="/images/logo.svg"
-        alt="logo" />
-  </div>
+  <nuxt-img
+      src="/images/logo.svg"
+      alt="logo"/>
 </template>
 
 <script setup lang="ts"></script>
