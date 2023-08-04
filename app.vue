@@ -1,6 +1,5 @@
 <template>
   <div class="wrapper bg-black min-h-screen flex flex-col overflow-hidden">
-    <ProductThree/>
     <TheHeader/>
     <ProductOne/>
     <AppFeatures :data="product1Features" class="lg:grid-cols-4"/>
@@ -8,6 +7,7 @@
     <ProductTwo/>
     <AppFeatures :data="product2Features" class="lg:grid-cols-3"/>
     <CardFeatures :data="product2CardFeatures"/>
+    <ProductThree/>
     <AppFeatures :data="product3Features" class="lg:grid-cols-3"/>
     <Product3Image/>
     <ProductList/>

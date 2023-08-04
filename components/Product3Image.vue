@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div class="container py-[40px] xl:py-[90px]">
       <nuxt-img
           format="webp"
           fit="contain"

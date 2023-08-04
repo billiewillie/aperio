@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     devtools: {enabled: true},
     modules: [
         '@nuxt/image',
-        '@formkit/nuxt',
+        '@formkit/nuxt'
     ],
     postcss: {
         plugins: {

@@ -1,5 +1,5 @@
 <template>
-  <div id="product-3" class="py-[30px] lg:py-[60px]">
+  <div id="product-3" class="py-[30px] xl:py-[60px]">
     <div class="container flex flex-col xl:flex-row">
       <div class="image">
         <nuxt-img
@@ -7,20 +7,21 @@
             format="webp"
             alt=""/>
       </div>
-      <div class="text">
-        <h2 class="title">
-          <span class="font-light text-[9.8vw] flex">Программное обеспечение</span>
-          <span class="text-[15.5vw] font-bold">
+      <div class="flex xl:w-1/2 flex-col gap-y-[45px] xl:gap-y-[50px]">
+        <h2>
+          <span class="font-light text-[9.8vw] flex xl:text-[55px]">Программное обеспечение</span>
+          <span class="text-[15.5vw] xl:text-[86px] font-bold">
             <span>eSlide</span> <span class="text-custom-red">Manager</span>
           </span>
         </h2>
-        <ul class="flex flex-col gap-y-[30px] xl:gap-y-[60px]">
+        <ul class="flex flex-col gap-y-[20px] xl:gap-y-[40px]">
           <li
-              class="grid gap-x-[45px] xl:gap-x-[70px] items-start grid-cols-[50px_1fr] xl:grid-cols-[70px_1fr]"
+              class="grid gap-x-[20px] xl:gap-x-[30px] items-start grid-cols-[50px_1fr] xl:grid-cols-[70px_1fr]"
               v-for="item in data"
-              :key="item.id"
-          >
-            <div class="flex justify-center items-center w-[50px] h-[50px] rounded-full border-2 border-gray-500">+</div>
+              :key="item.id">
+            <div class="flex justify-center items-center w-[50px] h-[50px] rounded-full border-2 border-[#868786]">
+              <IconCheck class="w-[25px] h-[25px]" />
+            </div>
             <p class="flex-auto text-[18px]">{{ item.text}}</p>
           </li>
         </ul>
@@ -30,6 +31,8 @@
 </template>
 
 <script setup>
+import IconCheck from "~/components/icons/IconCheck.vue";
+
 const data = ref([
   {
     id: 1,
