@@ -1,9 +1,9 @@
 <template>
-  <ul class="nav flex flex-col items-center xl:justify-between xl:flex-row gap-x-[30px] gap-y-[20px]">
+  <ul class="nav flex flex-col items-center xl:justify-between xl:flex-row gap-x-[20px] gap-y-[20px]">
     <li class="nav-item" v-for="item in data" :key="item.id">
       <a
           :href="item.link"
-          class="text-custom-gray cursor-pointer text-[21px] xl:text-[18px] hover:text-white transition-colors"
+          class="text-custom-gray cursor-pointer text-[21px] xl:text-[14px] lg:text-[18px] hover:text-white transition-colors"
           :class="{[`underline decoration-[#E4001D] underline-offset-4 text-white`]: item.id === 1}"
       >{{ item.text }} <b v-if="item.product.length > 0">{{ item.product}}</b></a>
     </li>

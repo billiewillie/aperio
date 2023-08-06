@@ -103,6 +103,29 @@
   flex-direction: column;
 }
 
+.contact-block .formkit-outer[data-type="checkbox"] .formkit-inner {
+  width: 19px;
+  height: 19px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #868786;
+}
+
+.contact-block .formkit-outer[data-type="checkbox"] input[type="checkbox"] {
+  min-height: auto;
+  opacity: 0;
+  width: 17px;
+  height: 17px;
+  padding: 0;
+  accent-color: black;
+}
+
+.contact-block .formkit-outer[data-type="checkbox"] input[type="checkbox"]:checked {
+  opacity: 1;
+}
+
+
 .contact-block .formkit-form {
   display: flex;
   flex-direction: column;

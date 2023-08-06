@@ -14,7 +14,7 @@
         class="locations-dropdown absolute top-full left-0 w-full flex-col"
         :class="isOpen ? 'flex' : 'hidden'">
       <li
-          class="option"
+          class="hover:underline decoration-custom-red decoration-solid underline-offset-4"
           v-for="option in options"
           :key="option"
           @click="setLocation">

@@ -5,7 +5,7 @@
         <br>ул. Профессора Попова, д. 23, лит. Е
         <br>тел.: + 7 (812) 320 49 49
       </p>
-      <div class="w-[202px]">
+      <div class="w-[202px] self-center">
         <TheLogo/>
       </div>
       <p class="text-[#868786] text-right">Авторизированный представитель
