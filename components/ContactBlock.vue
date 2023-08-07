@@ -17,16 +17,15 @@
                 placeholder="ФИО"
                 validation="required:trim"
                 :validation-messages="{
-                  required: 'Как вас зовут?'
+                  required: 'Укажите как вас зовут?'
                 }"/>
             <FormKit
                 type="text"
                 placeholder="Телефон"
                 validation="required|min:10"
                 :validation-messages="{
-                required: 'Укажите ваш номер телефона?',
-                min: 'Минимум 10 символов'
-              }"/>
+                  required: 'Укажите ваш номер телефона?'
+                }"/>
             <FormKit
                 type="email"
                 placeholder="E-mail"
@@ -64,7 +63,7 @@
                 validation="accepted"
                 label="Я согласен(на) на обработку персональных данных. ООО 'БиоЛайн' гарантирует конфиденциальность получаемой информации."
                 :validation-messages="{
-                  accepted: 'Потвердите, что вы согласны на обработку персональных данных?'
+                  accepted: 'Потвердите, что вы согласны на обработку персональных данных'
                 }"/>
           </FormKit>
         </div>
