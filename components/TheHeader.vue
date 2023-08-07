@@ -23,7 +23,7 @@
       </div>
       <div
           :class="[isOpen ? 'flex top-[80px]' : 'hidden top-[100px] xl:top-0 xl:flex xl:relative']"
-          class="absolute left-0 py-[35px] xl:py-0 px-[10px] flex-col xl:flex-row gap-y-[30px] lg:gap-x-[60px] bg-black w-full xl:w-auto xl:items-center">
+          class="absolute left-0 py-[35px] xl:py-0 px-[10px] flex-col xl:flex-row gap-y-[30px] 2xl:gap-x-[60px] bg-black w-full xl:w-auto xl:items-center">
         <div class="flex items-center justify-center">
           <TheMenu/>
         </div>

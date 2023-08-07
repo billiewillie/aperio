@@ -119,6 +119,7 @@
   height: 17px;
   padding: 0;
   accent-color: black;
+  cursor: pointer;
 }
 
 .contact-block .formkit-outer[data-type="checkbox"] input[type="checkbox"]:checked {

@@ -3,7 +3,7 @@
     <li class="nav-item" v-for="item in data" :key="item.id">
       <a
           :href="item.link"
-          class="text-custom-gray cursor-pointer text-[21px] xl:text-[14px] lg:text-[18px] hover:text-white transition-colors"
+          class="text-custom-gray cursor-pointer text-[21px] xl:text-[14px] 2xl:text-[18px] hover:text-white transition-colors"
           :class="{[`underline decoration-[#E4001D] underline-offset-4 text-white`]: item.id === 1}"
       >{{ item.text }} <b v-if="item.product.length > 0">{{ item.product}}</b></a>
     </li>
