@@ -1,9 +1,9 @@
 <template>
   <div id="product-2" class="py-[20px] flex flex-col xl:flex-row xl:py-[90px] relative">
-    <div class="xl:absolute xl:order-2 xl:right-0 xl:top-0 xl:bottom-0 xl:margin-auto xl:w-2/3">
+    <div class="xl:absolute xl:order-2 xl:right-0 xl:top-0 xl:bottom-0 xl:margin-auto xl:w-1/2">
       <nuxt-img
           src="/images/product-2-image.png"
-          class="object-right object-contain h-full w-full"
+          class="object-left object-contain h-full w-full"
           loading="lazy"
           format="webp"
           alt="product-2"/>

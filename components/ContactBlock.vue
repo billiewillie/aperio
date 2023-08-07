@@ -15,11 +15,10 @@
             <FormKit
                 type="text"
                 placeholder="ФИО"
-                validation="required|min:5"
+                validation="required:trim"
                 :validation-messages="{
-                required: 'Как вас зовут?',
-                min: 'Минимум 5 символов'
-              }"/>
+                  required: 'Как вас зовут?'
+                }"/>
             <FormKit
                 type="text"
                 placeholder="Телефон"
