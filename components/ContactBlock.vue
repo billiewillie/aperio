@@ -90,24 +90,23 @@
 
 <script setup>
 import axios from "axios";
-import {useToast} from "vue-toastification";
-import {reset} from '@formkit/core'
 
-const toast = useToast()
+const {$toast} = useNuxtApp()
+import {reset} from '@formkit/core'
 
 async function submitHandler(credentials) {
   try {
     const url = "https://send-aperio.trifonov.space/api/v1/send"
     const res = await axios.post(url, credentials)
     if (res.status === 200) {
-      toast.success("Успешно отправлено!", {
+      $toast.success("Успешно отправлено!", {
         timeout: 3000,
         position: 'top-center'
       });
       reset('myForm');
     }
   } catch (e) {
-    toast.error("Не отправлено!", {
+    $toast.error("Не отправлено!", {
       timeout: 3000,
       position: 'top-center'
     });
