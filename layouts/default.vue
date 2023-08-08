@@ -70,7 +70,7 @@
     </header>
     <ProductOne/>
     <AppFeatures :data="product1Features" class="lg:grid-cols-4"/>
-    <CardFeatures :data="product1CardFeatures"/>
+    <CardFeatures :data="product1CardFeatures" @setVideoPlay="setVideoPlay"/>
     <ProductTwo/>
     <AppFeatures :data="product2Features" class="lg:grid-cols-3"/>
     <CardFeatures :data="product2CardFeatures"/>
@@ -97,6 +97,7 @@
         </p>
       </div>
     </footer>
+    <ThePopup :isVideoPlay="isVideoPlay" @setVideoPlay="setVideoPlay" />
   </div>
 </template>
 
@@ -117,6 +118,7 @@ import IconFeature13 from "@@/components/icons/IconFeature13.vue";
 import IconFeature14 from "@@/components/icons/IconFeature14.vue";
 import IconPhone from "~/components/icons/IconPhone.vue";
 import IconTriangle from "~/components/icons/IconTriangle.vue";
+import ThePopup from "~/components/ThePopup.vue";
 
 const locations = ref({
   RUS: {
@@ -269,7 +271,7 @@ const product1CardFeatures = [
   {
     id: 1,
     type: 'video',
-    video: '',
+    video: '/video.webm',
     cover: '/images/card-2-image.jpg',
     title: 'специальный объектив 40x',
     text: 'Специально разработанный Leica Microsystems апохроматический объектив, оптимизированный для высокоскоростного сканирования, с увеличенным до 1 мм полем зрения.'
@@ -336,4 +338,11 @@ const vClickOutside = {
     document.body.removeEventListener('click', el.__ClickOutsideHandler);
   }
 }
+
+const isVideoPlay = ref(false);
+
+const setVideoPlay = (bool) => {
+  isVideoPlay.value = bool;
+}
+
 </script>
