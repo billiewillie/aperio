@@ -98,6 +98,7 @@
       </div>
     </footer>
     <ThePopup :isVideoPlay="isVideoPlay" @setVideoPlay="setVideoPlay" />
+
   </div>
 </template>
 

@@ -9,13 +9,15 @@
             Вами:</p>
           <FormKit
               type="form"
-              submit-label="Связаться с нами"
+              @submit="submitHandler"
+              id="myForm" submit-label="Связаться с нами"
               class="max-w-[520px] flex flex-col gap-[10px]"
               incomplete-message="Пожалуйста, заполните все поля">
             <FormKit
                 type="text"
                 placeholder="ФИО"
                 validation="required:trim"
+                name="Имя"
                 :validation-messages="{
                   required: 'Укажите как вас зовут?'
                 }"/>
@@ -23,11 +25,13 @@
                 type="text"
                 placeholder="Телефон"
                 validation="required|min:10"
+                name="Телефон"
                 :validation-messages="{
-                  required: 'Укажите ваш номер телефона?'
+                  required: 'Укажите ваш номер телефона'
                 }"/>
             <FormKit
                 type="email"
+                name="Email"
                 placeholder="E-mail"
                 validation="required"
                 :validation-messages="{
@@ -37,12 +41,14 @@
             <FormKit
                 type="text"
                 placeholder="Город"
+                name="Город"
                 validation="required"
                 :validation-messages="{
                 required: 'Укажите ваш город'
               }"/>
             <FormKit
                 type="text"
+                name="Место работы"
                 placeholder="Место работы"
                 validation="required"
                 :validation-messages="{
@@ -51,16 +57,19 @@
             <FormKit
                 type="text"
                 placeholder="Лаборатория"
+                name="Лаборатория"
                 validation="required"
                 :validation-messages="{
                 required: 'Укажите вашу лабораторию'
               }"/>
             <FormKit
                 type="textarea"
+                name="Комментарий"
                 placeholder="Комментарий"/>
             <FormKit
                 type="checkbox"
                 validation="accepted"
+                name="обработка данных"
                 label="Я согласен(на) на обработку персональных данных. ООО 'БиоЛайн' гарантирует конфиденциальность получаемой информации."
                 :validation-messages="{
                   accepted: 'Потвердите, что вы согласны на обработку персональных данных'
@@ -78,6 +87,34 @@
     </div>
   </div>
 </template>
+
+<script setup>
+import axios from "axios";
+import {useToast} from "vue-toastification";
+import {reset} from '@formkit/core'
+
+const toast = useToast()
+
+async function submitHandler(credentials) {
+  try {
+    const url = "https://send-aperio.trifonov.space/api/v1/send"
+    const res = await axios.post(url, credentials)
+    if (res.status === 200) {
+      toast.success("Успешно отправлено!", {
+        timeout: 3000,
+        position: 'top-center'
+      });
+      reset('myForm');
+    }
+  } catch (e) {
+    toast.error("Не отправлено!", {
+      timeout: 3000,
+      position: 'top-center'
+    });
+  }
+}
+
+</script>
 
 <style>
 .contact-block input, textarea {

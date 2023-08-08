@@ -18,6 +18,9 @@
     "tailwindcss": "^3.3.3"
   },
   "dependencies": {
-    "@formkit/nuxt": "^0.17.5"
+    "@formkit/core": "^0.17.5",
+    "@formkit/nuxt": "^0.17.5",
+    "axios": "^1.4.0",
+    "vue-toastification": "^2.0.0-rc.5"
   }
 }
