@@ -94,6 +94,7 @@ const clickBurger = () => {
 const setLocation = (e) => {
   emit('setLocation', e.target.innerText);
   toggleMenu();
+  clickBurger();
 }
 
 const toggleMenu = () => {

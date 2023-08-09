@@ -23,7 +23,7 @@
             :class="[isMenuOpen ? 'flex top-[80px]' : 'hidden top-[100px] xl:top-0 xl:flex xl:relative']"
             class="absolute left-0 py-[35px] xl:py-0 px-[10px] xl:px-0 flex-col xl:flex-row gap-y-[30px] xl:gap-x-[30px] 2xl:gap-x-[60px] bg-black w-full xl:w-auto xl:items-center">
           <div class="flex items-center justify-center">
-            <TheMenu/>
+            <TheMenu @clickBurger="clickBurger"/>
           </div>
           <div class="flex gap-x-[10px] justify-center items-center">
             <div class="icon">
@@ -354,6 +354,7 @@ onMounted(() => {
     entries.forEach((entry) => {
       if (entry.intersectionRatio > 0) {
         currentSection.value = entry.target.getAttribute('id');
+        isMenuOpen.value = false;
       }
     })
   });
