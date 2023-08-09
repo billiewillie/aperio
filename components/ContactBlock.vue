@@ -5,8 +5,7 @@
         <div class="form-inner justify-center flex flex-col max-w-[520px] gap-y-[20px]">
           <h2 class="text-[37px] xl:text-[34px] leading-[1.2]">Оцените возможности <span class="text-[#E4001D]">сканера Aperio!</span>
           </h2>
-          <p class="text-[18px] xl:text-[22px]">Заполните форму с контактными данными, и наш специалист свяжется с
-            Вами:</p>
+          <p class="text-[18px] xl:text-[22px]">Заполните форму с контактными данными, и наш специалист свяжется с Вами:</p>
           <FormKit
               type="form"
               @submit="submitHandler"
@@ -77,7 +76,7 @@
                   accepted: 'Потвердите, что вы согласны на обработку персональных данных'
                 }">
               <template #label="context">
-                <span class="text-[16px] text-custom-gray">Я согласен(на) на обработку персональных данных. ООО "БиоЛайн" гарантирует <a href="/assets/pdf/policy.pdf" target="_blank" class="underline underline-offset-4">конфиденциальность</a> получаемой информации.</span>
+                <span class="text-[16px] text-custom-gray">Я согласен(на) на обработку персональных данных. ООО "БиоЛайн" гарантирует <a href="/pdf/policy.pdf" target="_blank" class="underline underline-offset-4">конфиденциальность</a> получаемой информации.</span>
               </template>
             </FormKit>
           </FormKit>
