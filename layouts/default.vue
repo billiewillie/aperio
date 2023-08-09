@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper bg-black min-h-screen flex flex-col overflow-hidden justify-between">
-    <header class="header py-[15px] xl:py-[34px] relative z-10">
+    <header
+        class="header py-[15px] xl:py-[34px] relative z-10">
       <div class="container flex items-center justify-between">
         <div class="w-[156px] xl:w-[196px]">
           <TheLogo/>
@@ -97,8 +98,8 @@
         </p>
       </div>
     </footer>
-    <ThePopup :isVideoPlay="isVideoPlay" @setVideoPlay="setVideoPlay" />
-
+    <ThePopup :isVideoPlay="isVideoPlay" @setVideoPlay="setVideoPlay"/>
+    <TheNavigation :currentSection="currentSection"/>
   </div>
 </template>
 
@@ -346,4 +347,19 @@ const setVideoPlay = (bool) => {
   isVideoPlay.value = bool;
 }
 
+const currentSection = ref('product-1');
+
+onMounted(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > 0) {
+        currentSection.value = entry.target.getAttribute('id');
+      }
+    })
+  });
+
+  document.querySelectorAll('.section').forEach((section) => {
+    observer.observe(section);
+  })
+})
 </script>

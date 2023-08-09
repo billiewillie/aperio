@@ -1,5 +1,5 @@
 <template>
-  <div id="product-3" class="py-[30px] xl:py-[60px]">
+  <div id="product-3" class="section py-[30px] xl:py-[60px]">
     <div class="container flex flex-col xl:flex-row items-center">
       <div class="image xl:w-1/2">
         <nuxt-img

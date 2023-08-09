@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-block relative overflow-hidden bg-[#0C0C0C] py-[35px]" id="contacts">
+  <div class="section contact-block relative overflow-hidden bg-[#0C0C0C] py-[35px]" id="contacts">
     <div class="container">
       <div class="form-wrapper xl:w-1/2 flex justify-center">
         <div class="form-inner justify-center flex flex-col max-w-[520px] gap-y-[20px]">
@@ -17,7 +17,7 @@
                 type="text"
                 placeholder="ФИО"
                 validation="required:trim"
-                name="Имя"
+                name="name"
                 :validation-messages="{
                   required: 'Укажите как вас зовут?'
                 }"/>
@@ -25,13 +25,13 @@
                 type="text"
                 placeholder="Телефон"
                 validation="required|min:10"
-                name="Телефон"
+                name="phone"
                 :validation-messages="{
                   required: 'Укажите ваш номер телефона'
                 }"/>
             <FormKit
                 type="email"
-                name="Email"
+                name="email"
                 placeholder="E-mail"
                 validation="required"
                 :validation-messages="{
@@ -41,14 +41,14 @@
             <FormKit
                 type="text"
                 placeholder="Город"
-                name="Город"
+                name="city"
                 validation="required"
                 :validation-messages="{
                 required: 'Укажите ваш город'
               }"/>
             <FormKit
                 type="text"
-                name="Место работы"
+                name="job"
                 placeholder="Место работы"
                 validation="required"
                 :validation-messages="{
@@ -57,19 +57,19 @@
             <FormKit
                 type="text"
                 placeholder="Лаборатория"
-                name="Лаборатория"
+                name="laboratory"
                 validation="required"
                 :validation-messages="{
                 required: 'Укажите вашу лабораторию'
               }"/>
             <FormKit
                 type="textarea"
-                name="Комментарий"
+                name="commentary"
                 placeholder="Комментарий"/>
             <FormKit
                 type="checkbox"
                 validation="accepted"
-                name="обработка данных"
+                name="data_checking"
                 label="Я согласен(на) на обработку персональных данных. ООО 'БиоЛайн' гарантирует конфиденциальность получаемой информации."
                 :validation-messages="{
                   accepted: 'Потвердите, что вы согласны на обработку персональных данных'
@@ -91,13 +91,13 @@
 <script setup>
 import axios from "axios";
 
-const {$toast} = useNuxtApp()
-import {reset} from '@formkit/core'
+const {$toast} = useNuxtApp();
+import {reset} from '@formkit/core';
 
 async function submitHandler(credentials) {
   try {
-    const url = "https://send-aperio.trifonov.space/api/v1/send"
-    const res = await axios.post(url, credentials)
+    const url = "https://send-aperio.trifonov.space/api/v1/send";
+    const res = await axios.post(url, credentials);
     if (res.status === 200) {
       $toast.success("Успешно отправлено!", {
         timeout: 3000,
