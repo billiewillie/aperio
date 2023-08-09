@@ -70,10 +70,16 @@
                 type="checkbox"
                 validation="accepted"
                 name="data_checking"
+                outer-class="order-1"
+                inner-class="mt-[2px]"
                 label="Я согласен(на) на обработку персональных данных. ООО 'БиоЛайн' гарантирует конфиденциальность получаемой информации."
                 :validation-messages="{
                   accepted: 'Потвердите, что вы согласны на обработку персональных данных'
-                }"/>
+                }">
+              <template #label="context">
+                <span class="text-[16px] text-custom-gray">Я согласен(на) на обработку персональных данных. ООО "БиоЛайн" гарантирует <a href="/assets/pdf/policy.pdf" target="_blank" class="underline underline-offset-4">конфиденциальность</a> получаемой информации.</span>
+              </template>
+            </FormKit>
           </FormKit>
         </div>
       </div>
