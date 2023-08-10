@@ -67,10 +67,64 @@
         </div>
       </div>
     </header>
-    <ProductOne/>
+    <div id="product-1" class="section py-[40px] xl:py-[90px]">
+      <div class="container flex flex-col xl:flex-row items-center">
+        <div class="xl:w-1/2">
+          <nuxt-img
+              src="/images/product-1-image.png"
+              class="scale-150 xl:scale-1"
+              format="webp"
+              quality="100"
+              alt="product-1"/>
+        </div>
+        <div class="flex justify-center xl:w-1/2">
+          <div class="flex flex-col gap-y-[50px] xl:items-end xl:max-w-[500px]">
+            <h1 class="title flex flex-col">
+              <span class="text-[10.3vw] font-light leading-[1] text-justify xl:text-[53px] whitespace-nowrap">Сканирующий микроскоп</span>
+              <span class="font-bold text-[13.8vw] leading-[1] mb-[15px] xl:text-[70px] whitespace-nowrap">
+              <span>Aperio</span>&nbsp;<span class="text-custom-red">GT&nbsp;450&nbsp;DX</span>
+            </span>
+              <span class="flex justify-between leading-[1]">
+              <span class="text-[13vw] font-light xl:text-[70px]">На</span>&nbsp;
+              <span class="font-bold text-[30vw] leading-[0.9] xl:text-[175px]">30</span>&nbsp;
+              <span class="flex flex-col font-light">
+                <span class="text-[13vw] xl:text-[70px]">патентов</span>
+                <span class="text-custom-red text-[15vw] xl:text-[83px]">УМНЕЕ</span>
+              </span>
+            </span>
+            </h1>
+            <AppButton @toggleFormPopup="toggleFormPopup"/>
+          </div>
+        </div>
+      </div>
+    </div>
     <AppFeatures :data="product1Features" class="lg:grid-cols-4"/>
     <CardFeatures :data="product1CardFeatures" @setVideoPlay="setVideoPlay"/>
-    <ProductTwo/>
+    <div id="product-2" class="section py-[20px] flex flex-col xl:flex-row xl:py-[90px] relative">
+      <div class="xl:absolute xl:order-2 xl:right-0 xl:top-0 xl:bottom-0 xl:margin-auto xl:w-1/2">
+        <nuxt-img
+            src="/images/product-2-image.png"
+            class="object-left object-contain h-full w-full"
+            loading="lazy"
+            format="webp"
+            alt="product-2"/>
+      </div>
+      <div class="container xl:order-1 flex flex-col xl:flex-row items-center">
+        <div class="flex justify-center xl:w-1/2">
+          <div class="flex flex-col gap-y-[50px] xl:w-[480px] xl:items-start">
+            <h2 class="title flex flex-col">
+              <span class="text-[10.3vw] font-light leading-[1] text-justify xl:text-[52px] whitespace-nowrap">Сканирующий микроскоп</span>
+              <span class="font-bold text-[22vw] leading-[1] xl:text-[112px] whitespace-nowrap">
+            <span>Aperio</span>&nbsp;<span class="text-custom-red">CS2</span>
+          </span>
+              <span class="text-[12vw] font-light xl:text-[60px]">для второго мнения и</span>
+              <span class="text-[16vw] font-bold leading-[1] xl:text-[78px] text-custom-red">телемедицины</span>
+            </h2>
+            <AppButton @toggleFormPopup="toggleFormPopup"/>
+          </div>
+        </div>
+      </div>
+    </div>
     <AppFeatures :data="product2Features" class="lg:grid-cols-3"/>
     <CardFeatures :data="product2CardFeatures"/>
     <ProductThree/>
@@ -98,6 +152,7 @@
     </footer>
     <ThePopup :isVideoPlay="isVideoPlay" @setVideoPlay="setVideoPlay"/>
     <TheNavigation :currentSection="currentSection"/>
+    <PopupForm :isFormOpen="isFormOpen" @toggleFormPopup="toggleFormPopup"/>
   </div>
 </template>
 
@@ -119,6 +174,7 @@ import IconFeature14 from "@@/components/icons/IconFeature14.vue";
 import IconPhone from "~/components/icons/IconPhone.vue";
 import IconTriangle from "~/components/icons/IconTriangle.vue";
 import ThePopup from "~/components/ThePopup.vue";
+import PopupForm from "../components/PopupForm.vue";
 
 const locations = ref({
   RUS: {
@@ -151,6 +207,11 @@ const locationValue = ref(locations.value["RUS"]);
 
 const isMenuOpen = ref(false);
 const isLocationOpen = ref(false);
+const isFormOpen = ref(false);
+
+const toggleFormPopup = () => {
+  isFormOpen.value = !isFormOpen.value;
+};
 
 const props = defineProps({
   location: {
