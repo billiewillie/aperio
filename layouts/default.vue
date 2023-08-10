@@ -1,7 +1,6 @@
 <template>
   <div class="wrapper bg-black min-h-screen flex flex-col overflow-hidden justify-between">
-    <header
-        class="header py-[15px] xl:py-[34px] relative z-10">
+    <header class="header py-[15px] xl:py-[34px] relative z-10">
       <div class="container flex items-center justify-between">
         <div class="w-[156px] xl:w-[196px]">
           <TheLogo/>
@@ -20,8 +19,8 @@
               class="flex bg-white w-[16px] h-[2px] rounded-[20px] absolute right-0 left-0 m-auto transition-all origin-center"></span>
         </div>
         <div
-            :class="[isMenuOpen ? 'flex top-[80px]' : 'hidden top-[100px] xl:top-0 xl:flex xl:relative']"
-            class="absolute left-0 py-[35px] xl:py-0 px-[10px] xl:px-0 flex-col xl:flex-row gap-y-[30px] xl:gap-x-[30px] 2xl:gap-x-[60px] bg-black w-full xl:w-auto xl:items-center">
+            :class="[isMenuOpen ? 'flex top-[80px] xl:top-0' : 'hidden top-[100px] xl:top-0 xl:flex xl:relative']"
+            class="absolute xl:relative left-0 py-[35px] xl:py-0 px-[10px] xl:px-0 flex-col xl:flex-row gap-y-[30px] xl:gap-x-[30px] 2xl:gap-x-[60px] bg-black w-full xl:w-auto xl:items-center">
           <div class="flex items-center justify-center">
             <TheMenu @clickBurger="clickBurger"/>
           </div>
@@ -49,8 +48,7 @@
                   v-for="option in locations"
                   :key="option"
                   @click="setLocation">
-                <div
-                    v-if="option.country !== location.country">
+                <div v-if="option.country !== location.country">
                   {{ option.country }}
                 </div>
               </li>
@@ -137,15 +135,15 @@ const locations = ref({
     address: '010000, Республика Казахстан, г. Астана',
     street: 'пр-т Кабанбай Батыра, д. 11/5, каб. 1206, (12 этаж), БЦ "Нурлы Орда"',
     phone: "+77172579933",
-    phoneFull: "+7 (771) 725-79-33"
+    phoneFull: "+7 (7172) 57 99 33"
   },
   UZB: {
     country: "UZB",
     link: '/uz',
     address: '100015, Республика Узбекистан, г. Ташкент',
     street: 'Мирабадский р-н, ул. Нукус, д. 71, 73-75',
-    phone: "+998940510036",
-    phoneFull: "+7 (998) 405-10-36"
+    phone: "+998555080241",
+    phoneFull: "+9 (985) 550 802 41"
   }
 });
 
@@ -186,7 +184,7 @@ const product1Features = [
   {
     id: 1,
     icon: icons.IconFeature1,
-    text: 'Автоматическое сканирование в режиме «поставил корзину и ушел»',
+    text: 'Автоматическое сканирование в режиме «поставил корзину и ушел»',
   },
   {
     id: 2,
@@ -196,32 +194,32 @@ const product1Features = [
   {
     id: 3,
     icon: icons.IconFeature3,
-    text: 'Приоритизация случаев для сканирования'
+    text: 'Приоритизация случаев для сканирования'
   },
   {
     id: 4,
     icon: icons.IconFeature4,
-    text: 'Вместимость до 450 стекол',
+    text: 'Вместимость до 450 стекол',
   },
   {
     id: 5,
     icon: icons.IconFeature5,
-    text: 'Специальный объектив 40х от Leica',
+    text: 'Специальный объектив 40х от Leica',
   },
   {
     id: 6,
     icon: icons.IconFeature6,
-    text: 'Время сканирования: 32 сек на 40х'
+    text: 'Время сканирования: 32 сек на 40х'
   },
   {
     id: 7,
     icon: icons.IconFeature7,
-    text: 'Нечувствителен к пузырям и надписям на стекле',
+    text: 'Нечувствителен к пузырям и надписям на стекле',
   },
   {
     id: 8,
     icon: icons.IconFeature8,
-    text: 'ICC профиль со 100% натуральными цветами',
+    text: 'ICC профиль со 100% натуральными цветами',
   },
 ];
 
@@ -234,12 +232,12 @@ const product2Features = [
   {
     id: 2,
     icon: icons.IconFeature10,
-    text: 'Позволяет работать с толстыми и двойными стёклами',
+    text: 'Позволяет работать с толстыми и двойными стёклами',
   },
   {
     id: 3,
     icon: icons.IconFeature11,
-    text: 'Сканирует на 20х и 40х',
+    text: 'Сканирует на 20х и 40х',
   },
 ];
 
@@ -247,17 +245,17 @@ const product3Features = [
   {
     id: 1,
     icon: icons.IconFeature12,
-    text: 'Получение второго мнения в сложных для интерпретации случаях',
+    text: 'Получение второго мнения в сложных для интерпретации случаях',
   },
   {
     id: 2,
     icon: icons.IconFeature13,
-    text: 'Доступ ко всему препарату, а не к ограниченному полю зрения',
+    text: 'Доступ ко всему препарату, а не к ограниченному полю зрения',
   },
   {
     id: 3,
     icon: icons.IconFeature14,
-    text: 'Отсутствует риск потерять или разбить стекло при транспортировке',
+    text: 'Отсутствует риск потерять или разбить стекло при транспортировке',
   },
 ];
 
@@ -268,7 +266,7 @@ const product1CardFeatures = [
     video: '',
     cover: '/images/card-1-image.jpg',
     title: 'открытый дизайн',
-    text: 'Открытый дизайн Aperio GT450 DX для безостановочной загрузки кассет со стёклами. Работа без управляющей рабочей станции. Максимальная продуктивность.'
+    text: 'Открытый дизайн Aperio GT450 DX для безостановочной загрузки кассет со стёклами. Работа без управляющей рабочей станции. Максимальная продуктивность.'
   },
   {
     id: 1,
@@ -276,7 +274,7 @@ const product1CardFeatures = [
     video: '/video.webm',
     cover: '/images/card-2-image.jpg',
     title: 'специальный объектив 40x',
-    text: 'Специально разработанный Leica Microsystems апохроматический объектив, оптимизированный для высокоскоростного сканирования, с увеличенным до 1 мм полем зрения.'
+    text: 'Специально разработанный Leica Microsystems апохроматический объектив, оптимизированный для высокоскоростного сканирования, с увеличенным до 1 мм полем зрения.'
   },
   {
     id: 1,
@@ -284,7 +282,7 @@ const product1CardFeatures = [
     video: '',
     cover: '/images/card-3-image.jpg',
     title: 'идеальная цветопередача',
-    text: 'Динамическая фокусировка по всему препарату и калибровка сканера на каждом стекле. Автоматический контроль качества произведёт проверку по результатам сканирования. Патоморфолог точно получит качественные изображения.'
+    text: 'Динамическая фокусировка по всему препарату и калибровка сканера на каждом стекле. Автоматический контроль качества произведёт проверку по результатам сканирования. Патоморфолог точно получит качественные изображения.'
   },
 ];
 
@@ -295,7 +293,7 @@ const product2CardFeatures = [
     video: '',
     cover: '/images/card-4-image.jpg',
     title: 'легкость в управлении',
-    text: 'Современный интерфейс управления сканером, не требующий специального обучения оператора.'
+    text: 'Современный интерфейс управления сканером, не требующий специального обучения оператора.'
   },
   {
     id: 1,
@@ -303,7 +301,7 @@ const product2CardFeatures = [
     video: '',
     cover: '/images/card-5-image.jpg',
     title: 'универсальность',
-    text: 'Апохроматический объектив, функция Z-стэк и линейный принцип сканирования дают безупречное изображение препарата без следов сшивки и позволяют работать с толстыми стёклами.'
+    text: 'Апохроматический объектив, функция Z-стэк и линейный принцип сканирования дают безупречное изображение препарата без следов сшивки и позволяют работать с толстыми стёклами.'
   },
   {
     id: 1,
@@ -311,7 +309,7 @@ const product2CardFeatures = [
     video: '',
     cover: '/images/card-6-image.jpg',
     title: 'быстрая загрузка',
-    text: 'Легкая загрузка от 1 до 5 стекол.'
+    text: 'Легкая загрузка от 1 до 5 стекол.'
   },
 ];
 
