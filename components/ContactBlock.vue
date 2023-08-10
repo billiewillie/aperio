@@ -70,6 +70,7 @@
                 placeholder="Комментарий"/>
             <FormKit
                 type="checkbox"
+                :value="true"
                 validation="accepted"
                 name="data_checking"
                 outer-class="order-1"
