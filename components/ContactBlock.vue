@@ -9,30 +9,33 @@
           <FormKit
               type="form"
               @submit="submitHandler"
-              id="myForm" submit-label="Связаться с нами"
+              id="myForm"
+              submit-label="Связаться с нами"
               class="max-w-[520px] flex flex-col gap-[10px]"
               incomplete-message="Пожалуйста, заполните все поля">
             <FormKit
                 type="text"
                 placeholder="ФИО"
-                validation="required:trim"
+                validation="required:trim|length:2"
                 name="name"
                 :validation-messages="{
-                  required: 'Укажите как вас зовут?'
+                  required: 'Укажите ваше имя',
+                  length: 'Короткое имя'
                 }"/>
             <FormKit
                 type="text"
                 placeholder="Телефон"
-                validation="required|min:10"
+                validation="required|length:7"
                 name="phone"
                 :validation-messages="{
-                  required: 'Укажите ваш номер телефона'
+                  required: 'Укажите ваш номер телефона',
+                  length: 'Мало символов'
                 }"/>
             <FormKit
                 type="email"
                 name="email"
                 placeholder="E-mail"
-                validation="required"
+                validation="required|email"
                 :validation-messages="{
                   required: 'Укажите ваш e-mail',
                   email: 'Укажите ваш e-mail'
@@ -43,24 +46,24 @@
                 name="city"
                 validation="required"
                 :validation-messages="{
-                required: 'Укажите ваш город'
-              }"/>
+                  required: 'Укажите ваш город',
+                }"/>
             <FormKit
                 type="text"
                 name="job"
                 placeholder="Место работы"
                 validation="required"
                 :validation-messages="{
-                required: 'Укажите ваше место работы'
-              }"/>
+                  required: 'Укажите ваше место работы'
+                }"/>
             <FormKit
                 type="text"
                 placeholder="Лаборатория"
                 name="laboratory"
                 validation="required"
                 :validation-messages="{
-                required: 'Укажите вашу лабораторию'
-              }"/>
+                  required: 'Укажите вашу лабораторию'
+                }"/>
             <FormKit
                 type="textarea"
                 name="commentary"
