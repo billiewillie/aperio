@@ -88,7 +88,7 @@ import {reset} from '@formkit/core';
 
 async function submitHandler(credentials) {
   try {
-    const url = "https://send-aperio.trifonov.space/api/v1/send";
+    const url = "https://aperio.biolinegroup.ru";
     const res = await axios.post(url, credentials);
     if (res.status === 200) {
       $toast.success("Успешно отправлено!", {
