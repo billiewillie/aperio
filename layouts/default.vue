@@ -370,7 +370,7 @@ const product2CardFeatures = [
     video: '',
     cover: '/images/card-6-image.jpg',
     title: 'быстрая загрузка',
-    text: 'Легкая загрузка от 1 до 5 стекол.'
+    text: 'Лёгкая загрузка от 1 до 5 стекол.'
   },
 ];
 

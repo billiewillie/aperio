@@ -1,88 +1,83 @@
 <template>
-  <div class="form-inner justify-center flex flex-col max-w-[520px] gap-y-[20px] z-10">
-    <h2 class="text-[37px] xl:text-[34px] leading-[1.2]">Оцените возможности <span class="text-[#E4001D]">сканера Aperio!</span>
-    </h2>
-    <p class="text-[18px] xl:text-[22px]">Заполните форму с контактными данными, и наш специалист свяжется с Вами:</p>
+  <FormKit
+      type="form"
+      @submit="submitHandler"
+      id="myForm"
+      submit-label="Связаться с нами"
+      class="max-w-[520px] flex flex-col gap-[10px]"
+      incomplete-message="Пожалуйста, заполните все поля">
     <FormKit
-        type="form"
-        @submit="submitHandler"
-        id="myForm"
-        submit-label="Связаться с нами"
-        class="max-w-[520px] flex flex-col gap-[10px]"
-        incomplete-message="Пожалуйста, заполните все поля">
-      <FormKit
-          type="text"
-          placeholder="ФИО"
-          validation="required:trim|length:2"
-          name="name"
-          :validation-messages="{
+        type="text"
+        placeholder="ФИО"
+        validation="required:trim|length:2"
+        name="name"
+        :validation-messages="{
                   required: 'Укажите ваше имя',
                   length: 'Короткое имя'
                 }"/>
-      <FormKit
-          type="text"
-          placeholder="Телефон"
-          validation="required|length:7"
-          name="phone"
-          :validation-messages="{
+    <FormKit
+        type="text"
+        placeholder="Телефон"
+        validation="required|length:7"
+        name="phone"
+        :validation-messages="{
                   required: 'Укажите ваш номер телефона',
                   length: 'Мало символов'
                 }"/>
-      <FormKit
-          type="email"
-          name="email"
-          placeholder="E-mail"
-          validation="required|email"
-          :validation-messages="{
+    <FormKit
+        type="email"
+        name="email"
+        placeholder="E-mail"
+        validation="required|email"
+        :validation-messages="{
                   required: 'Укажите ваш e-mail',
                   email: 'Укажите ваш e-mail'
                 }"/>
-      <FormKit
-          type="text"
-          placeholder="Город"
-          name="city"
-          validation="required"
-          :validation-messages="{
+    <FormKit
+        type="text"
+        placeholder="Город"
+        name="city"
+        validation="required"
+        :validation-messages="{
                   required: 'Укажите ваш город',
                 }"/>
-      <FormKit
-          type="text"
-          name="job"
-          placeholder="Место работы"
-          validation="required"
-          :validation-messages="{
-                  required: 'Укажите ваше место работы'
-                }"/>
-      <FormKit
-          type="text"
-          placeholder="Лаборатория"
-          name="laboratory"
-          validation="required"
-          :validation-messages="{
-                  required: 'Укажите вашу лабораторию'
-                }"/>
-      <FormKit
-          type="textarea"
-          name="commentary"
-          placeholder="Комментарий"/>
-      <FormKit
-          type="checkbox"
-          :value="true"
-          validation="accepted"
-          name="data_checking"
-          outer-class="order-1"
-          inner-class="mt-[2px]"
-          label="Я согласен(на) на обработку персональных данных. ООО 'БиоЛайн' гарантирует конфиденциальность получаемой информации."
-          :validation-messages="{
+    <FormKit
+        type="text"
+        name="job"
+        placeholder="Место работы"
+        validation="required"
+        :validation-messages="{
+            required: 'Укажите ваше место работы'
+          }"/>
+    <FormKit
+        type="text"
+        placeholder="Лаборатория"
+        name="laboratory"
+        validation="required"
+        :validation-messages="{
+            required: 'Укажите вашу лабораторию'
+          }"/>
+    <FormKit
+        type="textarea"
+        name="commentary"
+        placeholder="Комментарий"/>
+    <FormKit
+        type="checkbox"
+        :value="true"
+        validation="accepted"
+        name="data_checking"
+        outer-class="order-1"
+        inner-class="mt-[2px]"
+        label="Я согласен(на) на обработку персональных данных. ООО 'БиоЛайн' гарантирует конфиденциальность получаемой информации."
+        :validation-messages="{
                   accepted: 'Потвердите, что вы согласны на обработку персональных данных'
                 }">
-        <template #label="context">
+      <template #label="context">
           <span class="text-[16px] text-custom-gray">Я согласен(на) на обработку персональных данных. ООО "БиоЛайн" гарантирует <a
               href="/pdf/policy.pdf" target="_blank" class="underline underline-offset-4">конфиденциальность</a> получаемой информации.</span>
-        </template>
-      </FormKit>
+      </template>
     </FormKit>
-  </div>
+  </FormKit>
 </template>
 
 <script setup>
@@ -112,38 +107,45 @@ async function submitHandler(credentials) {
 </script>
 
 <style>
-.form-inner input, textarea {
+.formkit-form#myForm {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  z-index: 10;
+}
+
+#myForm input, textarea {
   width: 100%;
 }
 
-.form-inner .formkit-outer[data-type="checkbox"] .formkit-wrapper {
+#myForm .formkit-outer[data-type="checkbox"] .formkit-wrapper {
   display: flex;
   align-items: flex-start;
   column-gap: 15px;
 }
 
-.form-inner button[type="submit"] {
+#myForm button[type="submit"] {
   transition-property: background-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.15s;
 }
 
-.form-inner button[type="submit"]:hover {
+#myForm button[type="submit"]:hover {
   background-color: #E4001D;
 }
 
-.form-inner .formkit-outer {
+#myForm .formkit-outer {
   display: flex;
   flex-direction: column;
   row-gap: 5px;
 }
 
-.form-inner .formkit-outer[data-type="checkbox"] {
+#myForm .formkit-outer[data-type="checkbox"] {
   display: flex;
   flex-direction: column;
 }
 
-.form-inner .formkit-outer[data-type="checkbox"] .formkit-inner {
+#myForm .formkit-outer[data-type="checkbox"] .formkit-inner {
   width: 19px;
   height: 19px;
   -webkit-border-radius: 3px;
@@ -152,7 +154,7 @@ async function submitHandler(credentials) {
   border: 1px solid #868786;
 }
 
-.form-inner .formkit-outer[data-type="checkbox"] input[type="checkbox"] {
+#myForm .formkit-outer[data-type="checkbox"] input[type="checkbox"] {
   min-height: auto;
   opacity: 0;
   width: 17px;
@@ -162,24 +164,24 @@ async function submitHandler(credentials) {
   cursor: pointer;
 }
 
-.form-inner .formkit-outer[data-type="checkbox"] input[type="checkbox"]:checked {
+#myForm .formkit-outer[data-type="checkbox"] input[type="checkbox"]:checked {
   opacity: 1;
 }
 
 
-.form-inner .formkit-form {
+#myForm .formkit-form {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
 }
 
-.form-inner input,
-.form-inner textarea {
+#myForm input,
+#myForm textarea {
   background-color: #000;
   border: 1px solid #868786;
 }
 
-.form-inner input {
+#myForm input {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
@@ -187,15 +189,15 @@ async function submitHandler(credentials) {
   padding: 0 12px;
 }
 
-.form-inner textarea {
+#myForm textarea {
   -webkit-border-radius: 13px;
   -moz-border-radius: 13px;
   border-radius: 13px;
-  min-height: 120px;
+  min-height: 80px;
   padding: 12px;
 }
 
-.form-inner button[type="submit"] {
+#myForm button[type="submit"] {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
@@ -206,16 +208,16 @@ async function submitHandler(credentials) {
   text-transform: uppercase;
 }
 
-.form-inner input::placeholder,
-.form-inner textarea::placeholder {
+#myForm input::placeholder,
+#myForm textarea::placeholder {
   font-size: 18px;
 }
 
-.form-inner .formkit-label {
+#myForm .formkit-label {
   color: #868786;
 }
 
-.form-inner .formkit-message {
+#myForm .formkit-message {
   color: #E4001D;
 }
 </style>

@@ -18,7 +18,7 @@
           </div>
         </div>
         <div class="flex flex-col p-[20px] xl:p-[30px] gap-y-[15px]">
-          <h2 class="font-bold border-b border-custom-red pb-[15px] text-[20px] xl:text-[24px]">{{ item.title }}</h2>
+          <h2 class="font-bold uppercase border-b border-custom-red pb-[15px] text-[20px] xl:text-[24px]">{{ item.title }}</h2>
           <p class="text-white text-[18px] xl:text-[21px] leading-[1.3]">{{ item.text }}</p>
         </div>
       </div>
