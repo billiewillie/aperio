@@ -70,10 +70,10 @@
         inner-class="mt-[2px]"
         label="Я согласен(на) на обработку персональных данных. ООО 'БиоЛайн' гарантирует конфиденциальность получаемой информации."
         :validation-messages="{
-                  accepted: 'Потвердите, что вы согласны на обработку персональных данных'
-                }">
+          accepted: 'Потвердите, что вы согласны на обработку персональных данных'
+        }">
       <template #label="context">
-          <span class="text-[16px] text-custom-gray">Я согласен(на) на обработку персональных данных. ООО "БиоЛайн" гарантирует <a
+          <span class="text-[16px] text-custom-gray w-[calc(100%_-_23px)]">Я согласен(на) на обработку персональных данных. ООО "БиоЛайн" гарантирует <a
               href="/pdf/policy.pdf" target="_blank" class="underline underline-offset-4">конфиденциальность</a> получаемой информации.</span>
       </template>
     </FormKit>
@@ -146,8 +146,11 @@ async function submitHandler(credentials) {
 }
 
 #myForm .formkit-outer[data-type="checkbox"] .formkit-inner {
-  width: 19px;
-  height: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23px;
+  height: 23px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
