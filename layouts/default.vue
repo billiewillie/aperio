@@ -140,7 +140,7 @@
     <ContactBlock :location="locationValue"/>
     <footer id="footer" class="footer py-[30px]">
       <div class="container flex flex-col md:flex-row justify-between gap-[30px]">
-        <p class="md:w-1/3 text-[#868786]">
+        <p class="md:w-1/3 text-[#868786] md:text-[14px] lg:text-[18px]">
           <slot name="address"/>
           <br>
           <slot name="street"/>
@@ -152,7 +152,7 @@
         <div class="flex md:w-1/3 w-[202px] self-center md:self-start justify-center">
           <TheLogo/>
         </div>
-        <p class="md:w-1/3 text-[#868786] text-right">Авторизированный представитель
+        <p class="md:w-1/3 text-[#868786] text-right md:text-[14px] lg:text-[18px]">Авторизированный представитель
           <br> Leica Biosystems – компания «БиоЛайн»
           <br>© ООО «БиоЛайн», 2016 - 2023
         </p>
