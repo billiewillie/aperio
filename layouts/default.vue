@@ -73,29 +73,29 @@
         </div>
       </div>
     </header>
-    <div id="product-1" class="section py-[40px] xl:py-[90px]">
-      <div class="container flex flex-col xl:flex-row items-center">
-        <div class="xl:w-1/2">
+    <div id="product-1" class="section py-[40px] md:py-[70px] lg:py-[90px]">
+      <div class="container flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2">
           <nuxt-img
               src="/images/product-1-image.png"
-              class="scale-150 xl:scale-1"
+              class="scale-150 md:scale-1"
               format="webp"
               quality="100"
               alt="product-1"/>
         </div>
-        <div class="flex justify-center xl:w-1/2">
-          <div class="flex flex-col gap-y-[50px] xl:items-end xl:max-w-[500px]">
+        <div class="flex justify-center md:w-1/2">
+          <div class="flex flex-col gap-y-[50px] md:gap-y-[20px] lg:gap-y-[50px] md:items-end md:max-w-[500px]">
             <h1 class="title flex flex-col">
-              <span class="text-[10.3vw] font-light leading-[1] text-justify xl:text-[53px] whitespace-nowrap">Сканирующий микроскоп</span>
-              <span class="font-bold text-[13.8vw] leading-[1] mb-[15px] xl:text-[70px] whitespace-nowrap">
+              <span class="text-[10.3vw] font-light leading-[1] text-justify md:text-[35px] lg:text-[53px] whitespace-nowrap">Сканирующий микроскоп</span>
+              <span class="font-bold text-[13.8vw] leading-[1] mb-[15px] md:text-[47px] lg:text-[70px] whitespace-nowrap">
               <span>Aperio</span>&nbsp;<span class="text-custom-red">GT&nbsp;450&nbsp;DX</span>
             </span>
               <span class="flex justify-between leading-[1]">
-              <span class="text-[13vw] font-light xl:text-[70px]">На</span>&nbsp;
-              <span class="font-bold text-[30vw] leading-[0.9] xl:text-[175px]">30</span>&nbsp;
+              <span class="text-[13vw] font-light md:text-[50px] lg:text-[70px]">На</span>&nbsp;
+              <span class="font-bold text-[30vw] leading-[0.9] md:text-[125px] lg:text-[175px]">30</span>&nbsp;
               <span class="flex flex-col font-light">
-                <span class="text-[13vw] xl:text-[70px]">патентов</span>
-                <span class="text-custom-red text-[15vw] xl:text-[83px]">УМНЕЕ</span>
+                <span class="text-[13vw] md:text-[47px] lg:text-[70px]">патентов</span>
+                <span class="text-custom-red text-[15vw] md:text-[55px] lg:text-[83px]">УМНЕЕ</span>
               </span>
             </span>
             </h1>
@@ -106,8 +106,8 @@
     </div>
     <AppFeatures :data="product1Features" class="lg:grid-cols-4"/>
     <CardFeatures :data="product1CardFeatures" @setVideoPlay="setVideoPlay"/>
-    <div id="product-2" class="section py-[20px] flex flex-col xl:flex-row xl:py-[90px] relative">
-      <div class="xl:absolute xl:order-2 xl:right-0 xl:top-0 xl:bottom-0 xl:margin-auto xl:w-1/2">
+    <div id="product-2" class="section py-[20px] flex flex-col xl:flex-row md:py-[70px] xl:py-[90px] relative">
+      <div class="md:absolute md:order-2 md:right-0 md:top-0 md:bottom-0 md:margin-auto md:w-1/2">
         <nuxt-img
             src="/images/product-2-image.png"
             class="object-left object-contain h-full w-full"
@@ -115,16 +115,16 @@
             format="webp"
             alt="product-2"/>
       </div>
-      <div class="container xl:order-1 flex flex-col xl:flex-row items-center">
-        <div class="flex justify-center xl:w-1/2">
-          <div class="flex flex-col gap-y-[50px] xl:w-[480px] xl:items-start">
+      <div class="container md:order-1 flex flex-col md:flex-row items-center">
+        <div class="flex justify-center md:w-1/2">
+          <div class="flex flex-col gap-y-[50px] md:gap-y-[20px] lg:gap-y-[50px] md:max-w-[480px] md:items-start">
             <h2 class="title flex flex-col">
-              <span class="text-[10.3vw] font-light leading-[1] text-justify xl:text-[52px] whitespace-nowrap">Сканирующий микроскоп</span>
-              <span class="font-bold text-[22vw] leading-[1] xl:text-[112px] whitespace-nowrap">
-            <span>Aperio</span>&nbsp;<span class="text-custom-red">CS2</span>
-          </span>
-              <span class="text-[12vw] font-light xl:text-[60px]">для второго мнения и</span>
-              <span class="text-[16vw] font-bold leading-[1] xl:text-[78px] text-custom-red">телемедицины</span>
+              <span class="text-[10.3vw] font-light leading-[1] text-justify md:text-[40px] xl:text-[52px] whitespace-nowrap">Сканирующий микроскоп</span>
+              <span class="font-bold text-[22vw] leading-[1] md:text-[87px] xl:text-[112px] whitespace-nowrap">
+                <span>Aperio</span>&nbsp;<span class="text-custom-red">CS2</span>
+              </span>
+              <span class="text-[12vw] font-light md:text-[46px] xl:text-[60px]">для второго мнения и</span>
+              <span class="text-[16vw] font-bold leading-[1] md:text-[61px] xl:text-[78px] text-custom-red">телемедицины</span>
             </h2>
             <AppButton @toggleFormPopup="toggleFormPopup"/>
           </div>
@@ -139,8 +139,8 @@
     <ProductList/>
     <ContactBlock :location="locationValue"/>
     <footer id="footer" class="footer py-[30px]">
-      <div class="container flex flex-col xl:flex-row justify-between gap-[30px]">
-        <p class="xl:w-1/3 text-[#868786]">
+      <div class="container flex flex-col md:flex-row justify-between gap-[30px]">
+        <p class="md:w-1/3 text-[#868786]">
           <slot name="address"/>
           <br>
           <slot name="street"/>
@@ -149,10 +149,10 @@
           <br>
           <slot name="email"/>
         </p>
-        <div class="flex xl:w-1/3 w-[202px] self-center justify-center">
+        <div class="flex md:w-1/3 w-[202px] self-center md:self-start justify-center">
           <TheLogo/>
         </div>
-        <p class="xl:w-1/3 text-[#868786] text-right">Авторизированный представитель
+        <p class="md:w-1/3 text-[#868786] text-right">Авторизированный представитель
           <br> Leica Biosystems – компания «БиоЛайн»
           <br>© ООО «БиоЛайн», 2016 - 2023
         </p>
