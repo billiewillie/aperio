@@ -17,14 +17,14 @@ const data = ref([
   {
     id: 1,
     link: "#product-1",
-    text: "Сканер",
-    product: "Aperio GT450 DX"
+    text: "",
+    product: "Aperio GT 450 DX"
   },
   {
     id: 2,
     link: "#product-2",
-    text: "Сканер",
-    product: "Aperio CS 2"
+    text: "",
+    product: "Aperio CS2"
 
   },
   {
@@ -36,7 +36,7 @@ const data = ref([
   },
   {
     id: 4,
-    link: "#contacts",
+    link: "#footer",
     text: "Контакты",
     product: ""
   },

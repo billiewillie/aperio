@@ -9,6 +9,9 @@
     <template #phone>
       <span>тел:</span> <a href="tel:+78123204949">+7 (812) 320 49 49</a>
     </template>
+    <template #email>
+      <span>email:</span> <a :href="`mailto:${locationValue?.email}`">{{ locationValue?.email }}</a>
+    </template>
   </NuxtLayout>
 </template>
 
@@ -24,7 +27,8 @@ const locations = ref({
     address: '197022, Россия, Санкт-Петербург',
     street: 'ул. Профессора Попова, д. 23, лит. Е',
     phone: "+78123204949",
-    phoneFull: "+7 (812) 320 49 49"
+    phoneFull: "+7 (812) 320 49 49",
+    email: "main@bioline.ru"
   },
 });
 

@@ -20,15 +20,21 @@
         </div>
         <div
             :class="[isMenuOpen ? 'flex top-[80px] xl:top-0' : 'hidden top-[100px] xl:top-0 xl:flex xl:relative']"
-            class="absolute xl:relative left-0 py-[35px] xl:py-0 px-[10px] xl:px-0 flex-col xl:flex-row gap-y-[30px] xl:gap-x-[30px] 2xl:gap-x-[60px] bg-black w-full xl:w-auto xl:items-center">
+            class="absolute xl:relative left-0 py-[35px] xl:py-0 px-[10px] xl:px-0 flex-col xl:flex-row gap-y-[30px] xl:gap-x-[30px] 2xl:gap-x-[60px] bg-black w-full xl:w-auto items-center">
           <div class="flex items-center justify-center">
             <TheMenu @clickBurger="clickBurger"/>
           </div>
-          <div class="flex gap-x-[10px] justify-center items-center">
-            <div class="icon">
+          <div class="flex items-center justify-between w-[205px]">
+            <div class="w-[25px] h-[25px]">
               <IconPhone/>
             </div>
             <slot name="phone"/>
+          </div>
+          <div class="flex xl:hidden items-center justify-between w-[205px]">
+            <div class="w-[25px] h-[25px]">
+              <IconEmail/>
+            </div>
+            <slot name="email"/>
           </div>
           <div class="location flex relative justify-center xl:justify-start xl:w-[45px] cursor-pointer">
             <div
@@ -132,7 +138,7 @@
     <Product3Image/>
     <ProductList/>
     <ContactBlock :location="locationValue"/>
-    <footer class="footer py-[30px]">
+    <footer id="footer" class="footer py-[30px]">
       <div class="container flex flex-col xl:flex-row justify-between gap-[30px]">
         <p class="xl:w-1/3 text-[#868786]">
           <slot name="address"/>
@@ -140,6 +146,8 @@
           <slot name="street"/>
           <br>
           <slot name="phone"/>
+          <br>
+          <slot name="email"/>
         </p>
         <div class="flex xl:w-1/3 w-[202px] self-center justify-center">
           <TheLogo/>
@@ -172,10 +180,11 @@ import IconFeature11 from "@@/components/icons/IconFeature11.vue";
 import IconFeature12 from "@@/components/icons/IconFeature12.vue";
 import IconFeature13 from "@@/components/icons/IconFeature13.vue";
 import IconFeature14 from "@@/components/icons/IconFeature14.vue";
-import IconPhone from "~/components/icons/IconPhone.vue";
-import IconTriangle from "~/components/icons/IconTriangle.vue";
-import ThePopup from "~/components/ThePopup.vue";
-import PopupForm from "../components/PopupForm.vue";
+import IconPhone from "@@/components/icons/IconPhone.vue";
+import IconTriangle from "@@/components/icons/IconTriangle.vue";
+import ThePopup from "@@/components/ThePopup.vue";
+import PopupForm from "@@/components/PopupForm.vue";
+import IconEmail from "@@/components/icons/IconEmail.vue";
 
 const locations = ref({
   RUS: {
@@ -184,7 +193,8 @@ const locations = ref({
     address: '197022, Россия, Санкт-Петербург',
     street: 'ул. Профессора Попова, д. 23, лит. Е',
     phone: "+78123204949",
-    phoneFull: "+7 (812) 320 49 49"
+    phoneFull: "+7 (812) 320 49 49",
+    email: "main@bioline.ru"
   },
   KAZ: {
     country: "KAZ",
@@ -192,7 +202,8 @@ const locations = ref({
     address: '010000, Республика Казахстан, г. Астана',
     street: 'пр-т Кабанбай Батыра, д. 11/5, каб. 1206, (12 этаж), БЦ "Нурлы Орда"',
     phone: "+77172579933",
-    phoneFull: "+7 (7172) 57 99 33"
+    phoneFull: "+7 (7172) 57 99 33",
+    email: "main@bioline.ru"
   },
   UZB: {
     country: "UZB",
@@ -200,7 +211,8 @@ const locations = ref({
     address: '100015, Республика Узбекистан, г. Ташкент',
     street: 'Мирабадский р-н, ул. Нукус, д. 71, 73-75',
     phone: "+998555080241",
-    phoneFull: "+9 (985) 550 802 41"
+    phoneFull: "+9 (985) 550 802 41",
+    email: "main@bioline.ru"
   }
 });
 
