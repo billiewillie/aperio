@@ -24,7 +24,7 @@
           <div class="flex items-center justify-center">
             <TheMenu @clickBurger="clickBurger"/>
           </div>
-          <div class="flex items-center justify-between w-[205px]">
+          <div class="flex items-center justify-between w-[205px] xl:w-auto xl:gap-x-[10px]">
             <div class="w-[25px] h-[25px]">
               <IconPhone/>
             </div>
