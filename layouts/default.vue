@@ -153,6 +153,7 @@
     <ThePopup :isVideoPlay="isVideoPlay" @setVideoPlay="setVideoPlay"/>
     <TheNavigation :currentSection="currentSection"/>
     <PopupForm :isFormOpen="isFormOpen" @toggleFormPopup="toggleFormPopup"/>
+    <ButtonUp/>
   </div>
 </template>
 
