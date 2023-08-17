@@ -23,6 +23,10 @@ export default defineNuxtConfig({
                 {
                     name: 'keywords',
                     content: 'Aperio, GT 450 DX, Aperio CS2, ScanScope, Aperio AT2, гистосканер, гистоскан, KFBIO, Pannoramic, 3DHistech, Hamamatsu, Nanozoomer, сканер Leica, сканер Лейка, цифровая патология, сканер стекол, сканирование препаратов, цифровая патология, Digital pathology, аперио, патоморфология, второе мнение'
+                },
+                {
+                    name: 'robots',
+                    content: 'noindex'
                 }
             ],
 
