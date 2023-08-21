@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#0C0C0C] py-[40px] xl:py-[90px] rounded-[3px] shadow-[0_0_12px_0_rgba(0,0,0,0.18]">
+  <div class="bg-[#0C0C0C] py-[80px] rounded-[3px] shadow-[0_0_12px_0_rgba(0,0,0,0.18]">
     <div class="container grid grid-cols-1 md:grid-cols-3 gap-[30px]">
       <div class="bg-black rounded-[3px] overflow-hidden" v-for="item in data" :key="item.id">
         <div class="aspect-[3/2] relative">
