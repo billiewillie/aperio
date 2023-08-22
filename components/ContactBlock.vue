@@ -1,5 +1,5 @@
 <template>
-  <div class="section contact-block relative overflow-hidden bg-[#0C0C0C] py-[35px]" id="contacts">
+  <div class="section contact-block relative overflow-hidden bg-black py-[35px] md:py-[70px]" id="contacts">
     <div class="container">
       <div class="form-wrapper xl:w-1/2 flex justify-center">
         <div class="form-inner justify-center flex flex-col max-w-[520px] gap-y-[20px]">

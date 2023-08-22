@@ -1,9 +1,10 @@
 <template>
-  <div id="product-3" class="section py-[30px] md:py-[60px]">
-    <div class="container flex flex-col md:flex-row items-center">
-      <div class="image md:w-1/2">
+  <div id="product-3" class="section py-[30px] md:py-[60px] relative">
+    <div class="container flex flex-col md:flex-row items-center justify-end">
+      <div class="image md:w-[55%] md:absolute md:left-0 md:flex justify-end">
         <nuxt-img
             src="/images/product-3-image.png"
+            fit="contain"
             format="webp"
             alt=""/>
       </div>
@@ -11,9 +12,9 @@
         <div class="flex md:max-w-[520px] flex-col gap-y-[45px] md:gap-y-[30px] lg:gap-y-[50px]">
           <h2>
             <span class="font-light text-[9.8vw] flex md:text-[39px] lg:text-[55px]">Программное обеспечение</span>
-            <span class="text-[15.5vw] md:text-[61px] lg:text-[86px] font-bold">
-            <span>eSlide</span> <span class="text-custom-red">Manager</span>
-          </span>
+            <span class="text-[15.5vw] md:text-[61px] flex mt-[-20px] md:mt-[-30px] lg:text-[86px] font-bold">
+              <span>eSlide</span> <span class="text-custom-red">Manager</span>
+            </span>
           </h2>
           <ul class="flex flex-col gap-y-[20px] md:gap-y-[40px]">
             <li

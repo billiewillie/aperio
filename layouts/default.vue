@@ -106,8 +106,8 @@
     </div>
     <AppFeatures :data="product1Features" class="lg:grid-cols-4"/>
     <CardFeatures :data="product1CardFeatures" @setVideoPlay="setVideoPlay"/>
-    <div id="product-2" class="section py-[20px] flex flex-col xl:flex-row md:py-[70px] xl:py-[90px] relative">
-      <div class="md:absolute md:order-2 md:right-0 md:top-0 md:bottom-0 md:margin-auto md:w-1/2">
+    <div id="product-2" class="section py-[20px] flex flex-col xl:flex-row md:py-[70px] xl:py-[180px] relative">
+      <div class="md:absolute md:order-2 md:left-[40%] md:top-0 md:bottom-0 md:margin-auto md:w-2/3">
         <nuxt-img
             src="/images/product-2-image.png"
             class="object-left object-contain h-full w-full"
