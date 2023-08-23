@@ -1,5 +1,5 @@
 <template>
-  <div class="py-[80px] xl:py-[90px]">
+  <div class="py-[60px] xl:py-[90px]">
     <div class="container">
       <nuxt-img
           format="webp"
