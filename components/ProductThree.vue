@@ -11,8 +11,8 @@
       <div class="flex md:w-1/2 justify-center">
         <div class="flex md:max-w-[520px] flex-col gap-y-[45px] md:gap-y-[30px] lg:gap-y-[50px]">
           <h2>
-            <span class="font-light text-[9.8vw] flex md:text-[39px] lg:text-[55px]">Программное обеспечение</span>
-            <span class="text-[15.5vw] md:text-[61px] flex mt-[-20px] md:mt-[-30px] lg:text-[86px] font-bold">
+            <span class="font-light text-[9.8vw] flex md:text-[39px] lg:text-[53px]">Программное обеспечение</span>
+            <span class="text-[15.5vw] md:text-[61px] flex mt-[-20px] md:mt-[-30px] lg:text-[84px] font-bold">
               <span>eSlide</span> <span class="text-custom-red">Manager</span>
             </span>
           </h2>
