@@ -6,7 +6,7 @@
         class="w-full h-full absolute left-0 top-0 bg-black opacity-80"
         @click="stopVideo"></div>
     <div class="video w-[90%] max-w-[900px] z-10">
-      <video muted playsinline loop autoplay="autoplay" ref="video">
+      <video muted playsinline loop autoplay="autoplay" controls ref="video">
         <source src="https://send-aperio.trifonov.space/video/video.mp4" type="video/mp4">
       </video>
     </div>
